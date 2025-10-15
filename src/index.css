@@ -1,2 +1,17 @@
 @import "tailwindcss";
 
+@theme {
+    --color-primary: #f9943c;       /* Gold */
+    --color-primary-dark: #ae4607;  /* Deep Gold */
+    --color-primary-light: #EED9A3; /* Light Gold */
+  
+    --color-secondary: #1A1A1A;     /* Dark background */
+    --color-secondary-light: #2C2C2C;
+  
+    --color-accent: #FFFFFF;        /* White */
+    --color-accent-muted: #F7F7F7;  /* Light gray */
+  
+    --color-text-primary: #111111;  
+    --color-text-secondary: #555555;
+    --color-text-light: #9CA3AF;
+  }
