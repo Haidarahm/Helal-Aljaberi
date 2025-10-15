@@ -21,7 +21,7 @@ export default function Home() {
           technology with expert insights to help you make informed trading
           decisions and maximize your returns.
         </p>
-        <div className="flex gap-4 pt-4">
+        <div className="flex gap-4">
           <button className="px-8 py-4 bg-[color:var(--color-primary)] text-[color:var(--color-secondary)] font-semibold rounded-lg hover:bg-[color:var(--color-primary-dark)] transition-all duration-300 transform hover:scale-105">
             Get Started
           </button>
@@ -31,11 +31,11 @@ export default function Home() {
         </div>
       </div>
       <div className="right-section h-full  relative z-20 w-1/2">
-        <div className="container-image h-full w-full">
+        <div className="container-image relative h-full w-full">
           <img
             src={helal}
             alt="Helal"
-            className="h-full w-full  object-cover"
+            className="h-full w-full object-cover absolute "
           />
         </div>
       </div>
