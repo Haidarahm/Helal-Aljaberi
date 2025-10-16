@@ -8,7 +8,7 @@ export const Story = () => {
     AOS.init({ duration: 700, easing: "ease-out-quart", once: false });
   }, []);
   return (
-    <section className="relative flex flex-col md:flex-row h-screen w-full overflow-hidden bg-[color:var(--color-secondary)] text-white">
+    <section className="relative flex flex-col md:flex-row h-[75vh] md:h-screen w-full overflow-hidden bg-[color:var(--color-secondary)] text-white">
       {/* Left Content */}
       <div
         className="flex-1 flex items-center justify-center px-6 md:px-16 py-10 z-10"
@@ -18,7 +18,14 @@ export const Story = () => {
           <h2 className="text-3xl md:text-5xl font-bold text-[color:var(--color-primary)] mb-6">
             Success Stories
           </h2>
-          <p className="text-base md:text-lg text-[color:var(--color-accent-muted)] leading-relaxed">
+          {/* Mobile: shorter summary */}
+          <p className="text-base text-[color:var(--color-accent-muted)] leading-relaxed md:hidden">
+            Hilal Al-Jabri began his career as a police officer, gaining strong
+            experience in investigations and field work. After years of
+            excellence, he pursued training to share his expertise.
+          </p>
+          {/* Desktop/tablet: full text */}
+          <p className="hidden md:block md:text-lg text-[color:var(--color-accent-muted)] leading-relaxed">
             Hilal Al-Jabri began his career as a police officer, where he gained
             solid experience in criminal investigations and field work. After
             years of excellence in this field, Hilal felt a passion to develop

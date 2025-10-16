@@ -5,11 +5,11 @@ export default function About() {
   return (
     <section className="relative  bg-[color:var(--color-accent)] text-[color:var(--color-text-primary)] top-12">
       {/* Text content */}
-      <div className="space-y-6 order-2 lg:order-1 w-1/2 ml-10">
+      <div className="space-y-6 order-2 lg:order-1 w-full lg:w-1/2 ml-0 lg:ml-10 px-6 lg:px-0">
         <img
           src={aboutImg}
           alt="About"
-          className="w-2/3 helal-image absolute top-4 right-0 opacity-15   h-full  object-cover"
+          className="hidden lg:block w-2/3 helal-image absolute top-4 right-0 opacity-15 h-full object-cover"
         />
         <h2 className="text-3xl lg:text-4xl font-bold text-[color:var(--color-primary)]">
           About Hilal Al Jaberi
