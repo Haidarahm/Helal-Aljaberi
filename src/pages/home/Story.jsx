@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import story from "../../assets/home/story.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const Story = () => {
+  useEffect(() => {
+    AOS.init({ duration: 700, easing: "ease-out-quart", once: false });
+  }, []);
   return (
     <section className="relative flex flex-col md:flex-row h-screen w-full overflow-hidden bg-[color:var(--color-secondary)] text-white">
       {/* Left Content */}
-      <div className="flex-1 flex items-center justify-center px-6 md:px-16 py-10 z-10">
+      <div
+        className="flex-1 flex items-center justify-center px-6 md:px-16 py-10 z-10"
+        data-aos="fade-up"
+      >
         <div className="max-w-xl">
           <h2 className="text-3xl md:text-5xl font-bold text-[color:var(--color-primary)] mb-6">
             Success Stories
@@ -27,7 +35,11 @@ export const Story = () => {
       </div>
 
       {/* Right Image Background */}
-      <div className="flex-1 relative">
+      <div
+        className="flex-1 relative"
+        data-aos="fade-left"
+        data-aos-delay="100"
+      >
         <img
           src={story}
           alt="Success Story Background"

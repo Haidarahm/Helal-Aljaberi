@@ -1,4 +1,5 @@
-import helal from "../../assets/image2.png";
+import helal from "../../assets/image2.webp";
+import background from "../../assets/back.png";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -12,6 +13,7 @@ export default function Hero() {
     <div className="relative h-[90vh] md:h-screen flex items-center overflow-hidden bg-[color:var(--color-secondary)]">
       {/* Background Overlay */}
       <div className="absolute inset-0 z-0">
+        <img src={background} className="w-full h-full object-cover" alt="" />
         <div className="absolute inset-0 bg-gradient-to-r from-[color:var(--color-secondary)]/95 via-[color:var(--color-secondary)]/85 to-[color:var(--color-primary-dark)]/50"></div>
       </div>
 
