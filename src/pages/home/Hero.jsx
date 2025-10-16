@@ -26,7 +26,7 @@ export default function Hero() {
           Master the Art of Trading
         </h1>
         <h2
-          className="text-xl md:text-2xl lg:text-3xl font-semibold text-[color:var(--color-primary-light)]"
+          className="text-xl md:text-2xl lg:text-3xl font-semibold text-primary-light"
           data-aos="fade-up"
           data-aos-delay="100"
         >

@@ -15,3 +15,6 @@
     --color-text-secondary: #555555;
     --color-text-light: #9CA3AF;
   }
+  .swiper-pagination-bullet{
+    background: #ae4607 !important;
+  }
