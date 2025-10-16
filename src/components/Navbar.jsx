@@ -12,7 +12,7 @@ export default function Navbar() {
         </NavLink>
         <nav className="flex items-center gap-2">
           <NavItem to="/">Home</NavItem>
-          <NavItem to="/about">About</NavItem>
+          
           <NavItem to="/programs">Programs</NavItem>
           <NavItem to="/pricing">Pricing</NavItem>
           <NavItem to="/contact">Contact</NavItem>
