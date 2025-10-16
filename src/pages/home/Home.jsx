@@ -8,7 +8,7 @@ import { Adaptation } from "./Adaption";
 import { Certificates } from "./Certificates";
 const Home = () => {
   return (
-    <section className="flex flex-col w-full ">
+    <section className="flex flex-col w-full overflow-hidden">
       <Hero />
       <About />
       <Statistics />

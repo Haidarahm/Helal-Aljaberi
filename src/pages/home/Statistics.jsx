@@ -1,5 +1,6 @@
 import React from "react";
 import { Users, Star, Handshake, Globe } from "lucide-react";
+import CountUp from "../../components/CountUp";
 
 export const Statistics = () => {
   const stats = [
@@ -32,9 +33,19 @@ export const Statistics = () => {
           <div
             key={index}
             className="flex flex-col items-center bg-primary text-white p-6 rounded-2xl shadow-md hover:scale-105 transition-transform duration-300"
+            data-aos="fade-up"
+            data-aos-delay={index * 120}
+            data-aos-once="true"
           >
             <div className="mb-4">{item.icon}</div>
-            <h3 className="text-3xl font-bold">{item.value}</h3>
+            <CountUp
+              from={0}
+              to={item.value}
+              separator=","
+              direction="up"
+              duration={1}
+              className="text-3xl font-bold"
+            />
             <p className="mt-2 text-sm font-medium">{item.label}</p>
           </div>
         ))}
