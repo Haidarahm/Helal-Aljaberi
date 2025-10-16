@@ -1,65 +1,73 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import img1 from "../assets/images/1.jpeg";
+import img2 from "../assets/images/2.jpeg";
+import img3 from "../assets/images/3.jpeg";
+import img4 from "../assets/images/4.jpeg";
+import img5 from "../assets/images/5.jpeg";
+import img6 from "../assets/images/6.jpeg";
+import img7 from "../assets/images/7.jpeg";
+
 export default function Programs() {
+  useEffect(() => {
+    AOS.init({ duration: 700, easing: "ease-out-quart", once: false });
+    AOS.refresh();
+  }, []);
+  const images = [img1, img2, img3, img4, img5, img6, img7];
+
   const programs = [
     {
       title: "Turning Personal Identities into Additional Income",
       subtitle: "Transform your passions into profit",
       description:
         "Learn how to identify your unique skills and turn them into additional income sources that align with your personal brand.",
-      image:
-        "https://i.pinimg.com/736x/4d/0a/2c/4d0a2c44b3cb502661fdc928a0e2af63.jpg",
     },
     {
       title: "Key Principles of Investment",
       subtitle: "Master the foundations of smart investing",
       description:
         "Understand how to build long-term wealth through intelligent investment strategies and market insights.",
-      image:
-        "https://i.pinimg.com/736x/9a/3d/40/9a3d40d34a6f9e5dbfc1f87e2e99b6d3.jpg",
     },
     {
       title: "Developing Start-up Projects",
       subtitle: "From idea to sustainable business",
       description:
         "Explore how to launch, develop, and scale start-ups with practical strategies and proven business models.",
-      image:
-        "https://i.pinimg.com/736x/2f/53/41/2f5341e88a3e6c3e69da38b4bcb3cb50.jpg",
     },
     {
       title: "Public Speaking with Confidence",
       subtitle: "Speak, inspire, and lead",
       description:
         "Build confidence, enhance your speaking presence, and engage your audience with powerful communication techniques.",
-      image:
-        "https://i.pinimg.com/736x/8e/51/1c/8e511c305f1b1e70364a1d42c5dc8c02.jpg",
     },
     {
       title: "Building Reputation and Branding",
       subtitle: "Create a brand that speaks for you",
       description:
         "Learn how to build a strong reputation and personal brand that attracts opportunities and builds trust.",
-      image:
-        "https://i.pinimg.com/736x/f2/0b/41/f20b41c22d0b5aab42c0f09ab8d73e7b.jpg",
     },
     {
       title: "Getting Out of Debt and Investing from Salary",
       subtitle: "Smart money management for real freedom",
       description:
         "Discover step-by-step methods to manage debt, save effectively, and start investing wisely from your monthly income.",
-      image:
-        "https://i.pinimg.com/736x/7a/cc/17/7acc17ff2e4c7f7817ad47b41f00373c.jpg",
     },
     {
       title: "Finding Additional Income Sources",
       subtitle: "Expand your earning potential",
       description:
         "Explore creative and sustainable ways to generate multiple income streams that support your financial goals.",
-      image:
-        "https://i.pinimg.com/736x/14/97/64/149764c8ab4c6ce8f97c27806a22c3b9.jpg",
     },
   ];
 
+  const programsWithImages = programs.map((p, i) => ({
+    ...p,
+    image: images[i % images.length],
+  }));
+
   return (
-    <div className="bg-secondary text-accent py-16 px-6 md:px-20">
+    <div className="bg-secondary text-accent py-16 px-6 md:px-20 overflow-hidden">
       <h1 className="text-4xl font-bold text-primary text-center mb-4">
         Programs
       </h1>
@@ -69,10 +77,11 @@ export default function Programs() {
       </p>
 
       <div className="space-y-16">
-        {programs.map((program, index) => (
+        {programsWithImages.map((program, index) => (
           <div
             key={index}
             className="flex flex-col md:flex-row items-center justify-between bg-secondary-light rounded-2xl shadow-lg overflow-hidden"
+            data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
           >
             <div className="md:w-1/2 p-8">
               <h2 className="text-2xl font-semibold text-primary mb-2">

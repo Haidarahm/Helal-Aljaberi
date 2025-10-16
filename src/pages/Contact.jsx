@@ -87,9 +87,11 @@ export default function Contact() {
 
             <button
               type="button"
-              className="mt-2 inline-flex items-center justify-center rounded-xl bg-[color:var(--color-primary)] px-6 py-3 font-semibold text-[color:var(--color-accent)] shadow-md shadow-black/10 hover:bg-[color:var(--color-primary-dark)] transition-colors"
+              className="group relative mt-2 inline-flex items-center justify-center rounded-xl bg-[color:var(--color-primary)] px-6 py-3 font-semibold text-[color:var(--color-accent)] shadow-md shadow-black/10 transition-all duration-300 hover:bg-[color:var(--color-primary-dark)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-primary)]"
             >
-              Send Message
+              <span className="relative z-10">Send Message</span>
+              <span className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.25),rgba(255,255,255,0))]"></span>
+              <span className="ml-2 inline-block h-2 w-2 rounded-full bg-[color:var(--color-accent)] group-hover:scale-125 transition-transform duration-300"></span>
             </button>
           </form>
         </div>
