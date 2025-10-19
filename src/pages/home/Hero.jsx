@@ -20,20 +20,20 @@ export default function Hero() {
       {/* Left: Content */}
       <div className="left-section flex flex-col gap-5 w-full md:w-1/2 relative z-20 px-6 md:px-10">
         <h1
-          className="text-4xl md:text-5xl lg:text-7xl font-bold text-[color:var(--color-primary)]"
+          className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-[color:var(--color-primary)] tracking-tight drop-shadow-md"
           data-aos="fade-up"
         >
           Master the Art of Trading
         </h1>
         <h2
-          className="text-xl md:text-2xl lg:text-3xl font-semibold text-primary-light"
+          className="text-xl md:text-2xl lg:text-3xl font-semibold text-[color:var(--color-primary-light)] drop-shadow"
           data-aos="fade-up"
           data-aos-delay="100"
         >
           Your Gateway to Financial Freedom
         </h2>
         <p
-          className="text-base md:text-lg lg:text-xl text-[color:var(--color-accent)] leading-relaxed max-w-xl"
+          className="text-base md:text-lg lg:text-xl text-[color:var(--color-accent)]/95 leading-relaxed md:leading-8 max-w-xl drop-shadow"
           data-aos="fade-up"
           data-aos-delay="200"
         >

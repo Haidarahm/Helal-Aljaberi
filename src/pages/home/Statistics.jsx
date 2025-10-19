@@ -32,10 +32,8 @@ export const Statistics = () => {
         {stats.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col items-center bg-primary text-white p-6 rounded-2xl shadow-md hover:scale-105 transition-transform duration-300"
-            data-aos="fade-up"
-            data-aos-delay={index * 120}
-            data-aos-once="true"
+            className="flex flex-col  items-center bg-primary text-white p-6 rounded-2xl shadow-md hover:scale-105 transition-transform duration-300"
+            
           >
             <div className="mb-4">{item.icon}</div>
             <CountUp
