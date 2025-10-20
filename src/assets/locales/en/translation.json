@@ -9,5 +9,23 @@
     "toggle": "Toggle Language",
     "current": "English",
     "switch_to": "العربية"
+  },
+  "hero": {
+    "title": "Master the Art of Trading",
+    "subtitle": "Your Gateway to Financial Freedom",
+    "description": "Join thousands of successful traders who have transformed their financial future. Our advanced platform combines cutting-edge technology with expert insights to help you make informed trading decisions and maximize your returns.",
+    "get_started": "Get Started",
+    "learn_more": "Learn More"
+  },
+  "about": {
+    "title": "About Hilal Al Jaberi",
+    "description": "He is an entrepreneur and internationally certified financial analyst from the British Academy and locally accredited by the Emirates Training Institute. SMT is internationally accredited (USA, UK) in the field of training. Since 2017, he has specialized in investment and stock trading, and in startup and medium-sized enterprises. He has extensive experience in providing training and developing individuals. He has experience in successful businesses, including providing consulting to support projects and finding income-generating opportunities. Thanks to his success stories, he helps individuals and organizations build investment strategies and achieve financial sustainability.",
+    "why_title": "Why Hilal Al Jabri?",
+    "goals_title": "His Goals",
+    "goals_description": "Hilal seeks to provide effective training programs that aim to enable trainees to acquire the skills and knowledge necessary to achieve success in their fields, with a focus on innovation and continuous development.",
+    "message_title": "His Message to the World",
+    "message_description": "\"Knowledge is power, and participating in the development of others is my message. I believe that investing in people is the greatest investment, and I always strive to help others discover their latent potential and achieve their goals.\"",
+    "passion_title": "Passion for Developing People",
+    "passion_description": "Hilal is committed to developing individuals and communities through his expertise in training and development. He believes in empowering individuals with practical skills and knowledge that help them improve their lives and achieve their dreams."
   }
 }
