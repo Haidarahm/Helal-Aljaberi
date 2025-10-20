@@ -1,0 +1,13 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "programs": "البرامج",
+    "pricing": "الأسعار",
+    "contact": "اتصل بنا"
+  },
+  "language": {
+    "toggle": "تبديل اللغة",
+    "current": "العربية",
+    "switch_to": "English"
+  }
+}

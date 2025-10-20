@@ -1,9 +1,13 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Languages } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const { t } = useTranslation();
+  const { currentLanguage, toggleLanguage, isRTL } = useLanguage();
   const toggle = () => setOpen((v) => !v);
   const close = () => setOpen(false);
   return (
@@ -17,11 +21,22 @@ export default function Navbar() {
         </NavLink>
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-2">
-          <NavItem to="/">Home</NavItem>
-          <NavItem to="/programs">Programs</NavItem>
-          <NavItem to="/pricing">Pricing</NavItem>
-          <CTAItem to="/contact">Contact</CTAItem>
+          <NavItem to="/">{t("nav.home")}</NavItem>
+          <NavItem to="/programs">{t("nav.programs")}</NavItem>
+          <NavItem to="/pricing">{t("nav.pricing")}</NavItem>
+          <CTAItem to="/contact">{t("nav.contact")}</CTAItem>
         </nav>
+
+        {/* Language Toggle Button */}
+        <button
+          onClick={toggleLanguage}
+          className="hidden md:flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-[color:var(--color-secondary-light)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-primary)] transition-colors"
+          title={t("language.toggle")}
+          aria-label={t("language.toggle")}
+        >
+          <Languages size={18} />
+          <span className="text-sm font-medium">{t("language.switch_to")}</span>
+        </button>
         {/* Mobile toggle */}
         <button
           className="md:hidden inline-flex items-center justify-center p-2 rounded-lg hover:bg-[color:var(--color-secondary-light)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-primary)]"
@@ -40,17 +55,32 @@ export default function Navbar() {
       >
         <div className="px-4 py-3 flex flex-col gap-1 bg-[color:var(--color-secondary)]/95">
           <MobileNavItem to="/" onClick={close}>
-            Home
+            {t("nav.home")}
           </MobileNavItem>
           <MobileNavItem to="/programs" onClick={close}>
-            Programs
+            {t("nav.programs")}
           </MobileNavItem>
           <MobileNavItem to="/pricing" onClick={close}>
-            Pricing
+            {t("nav.pricing")}
           </MobileNavItem>
           <MobileCTA to="/contact" onClick={close}>
-            Contact
+            {t("nav.contact")}
           </MobileCTA>
+
+          {/* Mobile Language Toggle */}
+          <button
+            onClick={() => {
+              toggleLanguage();
+              close();
+            }}
+            className="mt-2 px-3 py-2 rounded-lg hover:bg-[color:var(--color-secondary-light)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-primary)] transition-colors flex items-center gap-2"
+            aria-label={t("language.toggle")}
+          >
+            <Languages size={18} />
+            <span className="text-base font-medium">
+              {t("language.switch_to")}
+            </span>
+          </button>
         </div>
       </div>
     </header>

@@ -1,0 +1,13 @@
+{
+  "nav": {
+    "home": "Home",
+    "programs": "Programs",
+    "pricing": "Pricing",
+    "contact": "Contact"
+  },
+  "language": {
+    "toggle": "Toggle Language",
+    "current": "English",
+    "switch_to": "العربية"
+  }
+}
