@@ -9,19 +9,31 @@ import cert2 from "../../assets/certificates/2.jpg";
 import cert3 from "../../assets/certificates/3.jpg";
 import cert4 from "../../assets/certificates/4.jpg";
 import cert5 from "../../assets/certificates/5.jpg";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../context/LanguageContext";
 
 export const Certificates = () => {
+  const { t } = useTranslation();
+  const { isRTL } = useLanguage();
+
   return (
     <section className="w-full bg-[color:var(--color-secondary)] py-12 md:py-16 px-4 md:px-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
         {/* Left: Texts */}
         <div className="md:order-1 order-2">
-          <h2 className="text-3xl md:text-4xl font-bold text-[color:var(--color-primary-light)]">
-            Certificates & Achievements
+          <h2
+            className={`text-3xl md:text-4xl font-bold text-[color:var(--color-primary-light)] font-zain ${
+              isRTL ? "text-right" : "text-left"
+            }`}
+          >
+            {t("certificates.title")}
           </h2>
-          <p className="mt-4 text-[color:var(--color-accent-muted)] leading-relaxed">
-            A selection of certifications and recognitions that highlight the
-            journey, expertise, and dedication to continuous growth.
+          <p
+            className={`mt-4 text-[color:var(--color-accent-muted)] leading-relaxed font-zain ${
+              isRTL ? "text-right" : "text-left"
+            }`}
+          >
+            {t("certificates.description")}
           </p>
         </div>
 

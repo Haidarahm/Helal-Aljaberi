@@ -44,7 +44,7 @@ export default function Hero() {
           {t("hero.subtitle")}
         </h2>
         <p
-          className={`text-base md:text-lg lg:text-xl text-[color:var(--color-accent)]/95 leading-relaxed md:leading-8 max-w-xl drop-shadow font-zain ${
+          className={`text-base md:text-lg lg:text-xl text-[color:var(--color-accent)]/95 leading-relaxed md:leading-8  drop-shadow font-zain ${
             isRTL ? "text-right" : "text-left"
           }`}
           data-aos="fade-up"

@@ -6,7 +6,8 @@ import "./home.css";
 import { Story } from "./Story";
 import { Adaptation } from "./Adaption";
 import { Certificates } from "./Certificates";
-import ContactCard from "../../components/ContactCard";
+import Contact from "../Contact";
+
 const Home = () => {
   return (
     <section className="flex flex-col w-full overflow-hidden">
@@ -16,7 +17,7 @@ const Home = () => {
       <Story />
       <Adaptation />
       <Certificates />
-      <ContactCard />
+      <Contact />
     </section>
   );
 };

@@ -2,8 +2,13 @@ import React, { useEffect } from "react";
 import { Quote } from "lucide-react"; // npm install lucide-react
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../context/LanguageContext";
 
 export const Adaptation = () => {
+  const { t } = useTranslation();
+  const { isRTL } = useLanguage();
+
   useEffect(() => {
     AOS.init({ duration: 700, easing: "ease-out-quart", once: false });
   }, []);
@@ -20,15 +25,17 @@ export const Adaptation = () => {
         />
 
         {/* Quote Text */}
-        <p className="text-xl md:text-2xl font-medium leading-relaxed text-[color:var(--color-accent-muted)] italic">
-          “Success is not just a goal, but a journey filled with challenges and
-          learning. I always strive to help others discover and develop their
-          potential to achieve lasting success.”
+        <p
+          className={`text-xl md:text-2xl font-medium leading-relaxed text-[color:var(--color-accent-muted)] italic font-zain ${
+            isRTL ? "text-right" : "text-center"
+          }`}
+        >
+          {t("adaptation.quote")}
         </p>
 
         {/* Author */}
-        <h4 className="mt-6 text-[color:var(--color-primary-light)] font-semibold text-lg">
-          — Hilal Al-Jabri
+        <h4 className="mt-6 text-[color:var(--color-primary-light)] font-semibold text-lg font-zain">
+          {t("adaptation.author")}
         </h4>
       </div>
     </section>

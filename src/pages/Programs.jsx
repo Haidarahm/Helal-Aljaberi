@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../context/LanguageContext";
 import img1 from "../assets/images/1.jpeg";
 import img2 from "../assets/images/2.jpeg";
 import img3 from "../assets/images/3.jpeg";
@@ -10,56 +12,16 @@ import img6 from "../assets/images/6.jpeg";
 import img7 from "../assets/images/7.jpeg";
 
 export default function Programs() {
+  const { t } = useTranslation();
+  const { isRTL } = useLanguage();
+
   useEffect(() => {
     AOS.init({ duration: 700, easing: "ease-out-quart", once: false });
     AOS.refresh();
   }, []);
-  const images = [img1, img2, img3, img4, img5, img6, img7];
 
-  const programs = [
-    {
-      title: "Turning Personal Identities into Additional Income",
-      subtitle: "Transform your passions into profit",
-      description:
-        "Learn how to identify your unique skills and turn them into additional income sources that align with your personal brand.",
-    },
-    {
-      title: "Key Principles of Investment",
-      subtitle: "Master the foundations of smart investing",
-      description:
-        "Understand how to build long-term wealth through intelligent investment strategies and market insights.",
-    },
-    {
-      title: "Developing Start-up Projects",
-      subtitle: "From idea to sustainable business",
-      description:
-        "Explore how to launch, develop, and scale start-ups with practical strategies and proven business models.",
-    },
-    {
-      title: "Public Speaking with Confidence",
-      subtitle: "Speak, inspire, and lead",
-      description:
-        "Build confidence, enhance your speaking presence, and engage your audience with powerful communication techniques.",
-    },
-    {
-      title: "Building Reputation and Branding",
-      subtitle: "Create a brand that speaks for you",
-      description:
-        "Learn how to build a strong reputation and personal brand that attracts opportunities and builds trust.",
-    },
-    {
-      title: "Getting Out of Debt and Investing from Salary",
-      subtitle: "Smart money management for real freedom",
-      description:
-        "Discover step-by-step methods to manage debt, save effectively, and start investing wisely from your monthly income.",
-    },
-    {
-      title: "Finding Additional Income Sources",
-      subtitle: "Expand your earning potential",
-      description:
-        "Explore creative and sustainable ways to generate multiple income streams that support your financial goals.",
-    },
-  ];
+  const images = [img1, img2, img3, img4, img5, img6, img7];
+  const programs = t("programs.programs", { returnObjects: true });
 
   const programsWithImages = programs.map((p, i) => ({
     ...p,
@@ -67,40 +29,81 @@ export default function Programs() {
   }));
 
   return (
-    <div className="bg-secondary text-accent py-16 px-6 md:px-20 overflow-hidden">
-      <h1 className="text-4xl font-bold text-primary text-center mb-4">
-        Programs
+    <div className="bg-[color:var(--color-secondary)] text-[color:var(--color-accent)] py-16 px-6 md:px-20 overflow-hidden">
+      <h1
+        className={`text-4xl font-bold text-[color:var(--color-primary)] text-center mb-4 font-zain ${
+          isRTL ? "text-right" : "text-center"
+        }`}
+      >
+        {t("programs.title")}
       </h1>
-      <p className="text-text-light text-center max-w-2xl mx-auto mb-12">
-        Browse my professional training workshops and courses designed to
-        enhance your skills, mindset, and career growth.
+      <p
+        className={`text-[color:var(--color-text-light)] text-center max-w-2xl mx-auto mb-12 font-zain ${
+          isRTL ? "text-right" : "text-center"
+        }`}
+      >
+        {t("programs.description")}
       </p>
 
       <div className="space-y-16">
         {programsWithImages.map((program, index) => (
           <div
             key={index}
-            className="flex flex-col md:flex-row items-center justify-between bg-secondary-light rounded-2xl shadow-lg overflow-hidden"
-            data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+            className={`flex flex-col md:flex-row items-center justify-between bg-[color:var(--color-secondary-light)] rounded-2xl shadow-lg overflow-hidden ${
+              isRTL ? "md:flex-row-reverse" : "md:flex-row"
+            }`}
+            data-aos={
+              index % 2 === 0
+                ? isRTL
+                  ? "fade-left"
+                  : "fade-right"
+                : isRTL
+                ? "fade-right"
+                : "fade-left"
+            }
           >
-            <div className="md:w-1/2 p-8">
-              <h2 className="text-2xl font-semibold text-primary mb-2">
+            <div
+              className={`md:w-1/2 p-8 ${isRTL ? "md:order-2" : "md:order-1"}`}
+            >
+              <h2
+                className={`text-2xl font-semibold text-[color:var(--color-primary)] mb-2 font-zain ${
+                  isRTL ? "text-right" : "text-left"
+                }`}
+              >
                 {program.title}
               </h2>
-              <h3 className="text-lg text-text-light mb-4">
+              <h3
+                className={`text-lg text-[color:var(--color-text-light)] mb-4 font-zain ${
+                  isRTL ? "text-right" : "text-left"
+                }`}
+              >
                 {program.subtitle}
               </h3>
-              <p className="text-text-secondary mb-6">{program.description}</p>
-              <button className="bg-primary hover:bg-primary-dark text-accent font-medium py-2 px-5 rounded-xl transition">
-                Enroll Now
+              <p
+                className={`text-[color:var(--color-text-secondary)] mb-6 font-zain ${
+                  isRTL ? "text-right" : "text-left"
+                }`}
+              >
+                {program.description}
+              </p>
+              <button
+                className={`bg-[color:var(--color-primary)] hover:bg-[color:var(--color-primary-dark)] text-[color:var(--color-accent)] font-medium py-2 px-5 rounded-xl transition font-zain ${
+                  isRTL ? "mr-auto" : "ml-0"
+                }`}
+              >
+                {t("programs.enroll_button")}
               </button>
             </div>
 
-            <div className="md:w-1/2">
+            <div className={`md:w-1/2 ${isRTL ? "md:order-1" : "md:order-2"}`}>
               <img
                 src={program.image}
                 alt={program.title}
-                className="w-full h-80 object-cover md:rounded-none md:rounded-r-2xl"
+                className={`w-full h-80 object-cover ${
+                  isRTL
+                    ? "md:rounded-none md:rounded-l-2xl"
+                    : "md:rounded-none md:rounded-r-2xl"
+                }`}
               />
             </div>
           </div>

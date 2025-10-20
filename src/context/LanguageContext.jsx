@@ -22,32 +22,37 @@ export const LanguageProvider = ({ children }) => {
     i18n.changeLanguage(currentLanguage);
   }, [i18n, currentLanguage]);
 
-  const toggleLanguage = () => {
+  const toggleLanguage = async () => {
     const newLanguage = currentLanguage === "ar" ? "en" : "ar";
     setCurrentLanguage(newLanguage);
     localStorage.setItem("language", newLanguage);
-    i18n.changeLanguage(newLanguage);
+
+    // Wait for language change to complete
+    await i18n.changeLanguage(newLanguage);
 
     // Update document direction for RTL/LTR support
-    // document.documentElement.dir = newLanguage === "ar" ? "rtl" : "ltr";
+  
     document.documentElement.lang = newLanguage;
 
-    // Refresh the page to ensure clean state
-    window.location.reload();
+    // Small delay to ensure translations are loaded before refresh
+    setTimeout(() => {
+      window.location.reload();
+    }, 50);
   };
 
-  const setLanguage = (language) => {
+  const setLanguage = async (language) => {
     if (language !== currentLanguage) {
       setCurrentLanguage(language);
       localStorage.setItem("language", language);
-      i18n.changeLanguage(language);
+      await i18n.changeLanguage(language);
 
       // Update document direction for RTL/LTR support
-      document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
       document.documentElement.lang = language;
 
-      // Refresh the page to ensure clean state
-      window.location.reload();
+      // Small delay to ensure translations are loaded before refresh
+      setTimeout(() => {
+        window.location.reload();
+      }, 50);
     }
   };
 

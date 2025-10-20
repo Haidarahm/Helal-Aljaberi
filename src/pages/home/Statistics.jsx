@@ -27,7 +27,7 @@ export const Statistics = () => {
   ];
 
   return (
-    <section className="relative bg-white py-16">
+    <section className="relative bg-white py-16 mt-12">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
         {stats.map((item, index) => (
           <div

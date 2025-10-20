@@ -2,41 +2,50 @@ import React, { useEffect } from "react";
 import story from "../../assets/home/story.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../context/LanguageContext";
 
 export const Story = () => {
+  const { t } = useTranslation();
+  const { isRTL } = useLanguage();
+
   useEffect(() => {
     AOS.init({ duration: 700, easing: "ease-out-quart", once: false });
   }, []);
   return (
-    <section className="relative flex flex-col md:flex-row h-[75vh] md:h-screen w-full overflow-hidden bg-[color:var(--color-secondary)] text-white">
+    <section
+      className={`relative flex ${
+        isRTL ? "md:flex-row-reverse" : "md:flex-row"
+      } flex-col h-[75vh] md:h-screen w-full overflow-hidden bg-[color:var(--color-secondary)] text-white`}
+    >
       {/* Left Content */}
       <div
         className="flex-1 flex items-center justify-center px-6 md:px-16 py-10 z-10"
         data-aos="fade-up"
       >
         <div className="max-w-xl">
-          <h2 className="text-3xl md:text-5xl font-bold text-[color:var(--color-primary)] mb-6">
-            Success Stories
+          <h2
+            className={`text-3xl md:text-5xl font-bold text-[color:var(--color-primary)] mb-6 font-zain ${
+              isRTL ? "text-right" : "text-left"
+            }`}
+          >
+            {t("story.title")}
           </h2>
           {/* Mobile: shorter summary */}
-          <p className="text-base text-[color:var(--color-accent-muted)] leading-relaxed md:hidden">
-            Hilal Al-Jabri began his career as a police officer, gaining strong
-            experience in investigations and field work. After years of
-            excellence, he pursued training to share his expertise.
+          <p
+            className={`text-base text-[color:var(--color-accent-muted)] leading-relaxed md:hidden font-zain ${
+              isRTL ? "text-right" : "text-left"
+            }`}
+          >
+            {t("story.mobile")}
           </p>
           {/* Desktop/tablet: full text */}
-          <p className="hidden md:block md:text-lg text-[color:var(--color-accent-muted)] leading-relaxed">
-            Hilal Al-Jabri began his career as a police officer, where he gained
-            solid experience in criminal investigations and field work. After
-            years of excellence in this field, Hilal felt a passion to develop
-            his skills and share his expertise with others. He decided to pursue
-            a career in training. Through his dedication to continuous learning
-            and the acquisition of numerous locally and internationally
-            accredited certifications, Hilal has become a recognized trainer,
-            specializing in trading, crisis management, and self-development.
-            Hilal has established a strong reputation for delivering outstanding
-            training courses, helping numerous individuals achieve their goals
-            and develop their capabilities.
+          <p
+            className={`hidden md:block md:text-lg text-[color:var(--color-accent-muted)] leading-relaxed font-zain ${
+              isRTL ? "text-right" : "text-left"
+            }`}
+          >
+            {t("story.desktop")}
           </p>
         </div>
       </div>

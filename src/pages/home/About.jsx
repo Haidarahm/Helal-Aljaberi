@@ -8,22 +8,26 @@ export default function About() {
   const { isRTL } = useLanguage();
 
   return (
-    <section className={`relative flex  bg-[color:var(--color-accent)] text-[color:var(--color-text-primary)] top-12 ${isRTL ? "flex-row-reverse" : "flex-row"}`}>
-      {/* Text content */}
-      <div
-     
-        className={` space-y-6 order-2  lg:order-1 w-full lg:w-1/2 ${
-          isRTL ? "mr-0 lg:mr-10 " : "ml-0 lg:ml-10"
-        } px-6 lg:px-0`}
-      >
-        <img
+    <section
+      className={`relative flex  bg-[color:var(--color-accent)] text-[color:var(--color-text-primary)] top-12 ${
+        isRTL ? "flex-row-reverse" : "flex-row"
+      }`}
+    >
+      <img
           src={aboutImg}
           alt="About"
           className={`hidden lg:block w-2/3 helal-image absolute top-4 ${
             isRTL ? "-left-1/5" : "right-0"
           } opacity-15 h-full object-cover`}
         />
+      {/* Text content */}
+      <div
+        className={`relative z-10 space-y-6 order-2  lg:order-1 w-full lg:w-1/2 ${
+          isRTL ? "mr-0 lg:mr-10 " : "ml-0 lg:ml-10"
+        } px-6 lg:px-0`}
+      >
         
+
         <h2
           className={`text-3xl lg:text-4xl font-bold text-[color:var(--color-primary)] font-zain ${
             isRTL ? "text-right" : "text-left"
@@ -96,7 +100,6 @@ export default function About() {
           </div>
         </div>
       </div>
-
     </section>
   );
 }

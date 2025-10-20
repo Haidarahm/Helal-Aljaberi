@@ -27,5 +27,151 @@
     "message_description": "\"Knowledge is power, and participating in the development of others is my message. I believe that investing in people is the greatest investment, and I always strive to help others discover their latent potential and achieve their goals.\"",
     "passion_title": "Passion for Developing People",
     "passion_description": "Hilal is committed to developing individuals and communities through his expertise in training and development. He believes in empowering individuals with practical skills and knowledge that help them improve their lives and achieve their dreams."
+  },
+  "story": {
+    "title": "Success Stories",
+    "mobile": "Hilal Al-Jabri began his career as a police officer, gaining strong experience in investigations and field work. After years of excellence, he pursued training to share his expertise.",
+    "desktop": "Hilal Al-Jabri began his career as a police officer, where he gained solid experience in criminal investigations and field work. After years of excellence in this field, Hilal felt a passion to develop his skills and share his expertise with others. He decided to pursue a career in training. Through his dedication to continuous learning and the acquisition of numerous locally and internationally accredited certifications, Hilal has become a recognized trainer, specializing in trading, crisis management, and self-development. Hilal has established a strong reputation for delivering outstanding training courses, helping numerous individuals achieve their goals and develop their capabilities."
+  },
+  "adaptation": {
+    "quote": "Success is not just a goal, but a journey filled with challenges and learning. I always strive to help others discover and develop their potential to achieve lasting success.",
+    "author": "— Hilal Al-Jabri"
+  },
+  "certificates": {
+    "title": "Certificates & Achievements",
+    "description": "A selection of certifications and recognitions that highlight the journey, expertise, and dedication to continuous growth."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "We'd love to hear from you. Send a message and we'll reply as soon as possible.",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "form": {
+      "full_name": "Full Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "name_placeholder": "Your name",
+      "email_placeholder": "you@example.com",
+      "subject_placeholder": "How can we help?",
+      "message_placeholder": "Write your message...",
+      "send_button": "Send Message"
+    }
+  },
+  "contact_page": {
+    "title": "Get In Touch",
+    "description": "Ready to start your trading journey? Contact us today and let's discuss how we can help you achieve your financial goals.",
+    "info_title": "Contact Information",
+    "info_description": "We're here to help you succeed. Reach out to us through any of the channels below.",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "location": "Office Location",
+    "form": {
+      "title": "Send us a Message",
+      "full_name": "Full Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Your Message",
+      "name_placeholder": "Enter your full name",
+      "email_placeholder": "Enter your email address",
+      "subject_placeholder": "What can we help you with?",
+      "message_placeholder": "Tell us about your goals and how we can help...",
+      "send_button": "Send Message"
+    }
+  },
+  "programs": {
+    "title": "Programs",
+    "description": "Browse my professional training workshops and courses designed to enhance your skills, mindset, and career growth.",
+    "enroll_button": "Enroll Now",
+    "programs": [
+      {
+        "title": "Turning Personal Identities into Additional Income",
+        "subtitle": "Transform your passions into profit",
+        "description": "Learn how to identify your unique skills and turn them into additional income sources that align with your personal brand."
+      },
+      {
+        "title": "Key Principles of Investment",
+        "subtitle": "Master the foundations of smart investing",
+        "description": "Understand how to build long-term wealth through intelligent investment strategies and market insights."
+      },
+      {
+        "title": "Developing Start-up Projects",
+        "subtitle": "From idea to sustainable business",
+        "description": "Explore how to launch, develop, and scale start-ups with practical strategies and proven business models."
+      },
+      {
+        "title": "Public Speaking with Confidence",
+        "subtitle": "Speak, inspire, and lead",
+        "description": "Build confidence, enhance your speaking presence, and engage your audience with powerful communication techniques."
+      },
+      {
+        "title": "Building Reputation and Branding",
+        "subtitle": "Create a brand that speaks for you",
+        "description": "Learn how to build a strong reputation and personal brand that attracts opportunities and builds trust."
+      },
+      {
+        "title": "Getting Out of Debt and Investing from Salary",
+        "subtitle": "Smart money management for real freedom",
+        "description": "Discover step-by-step methods to manage debt, save effectively, and start investing wisely from your monthly income."
+      },
+      {
+        "title": "Finding Additional Income Sources",
+        "subtitle": "Expand your earning potential",
+        "description": "Explore creative and sustainable ways to generate multiple income streams that support your financial goals."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Pricing",
+    "description": "Explore flexible training packages tailored for institutes, companies, and individuals — designed to maximize value and growth.",
+    "subscribe_button": "Subscribe",
+    "plans": [
+      {
+        "category": "Small Institutes & Organizations",
+        "items": [
+          {
+            "title": "General / Specialized Consultation (1 Hour)",
+            "price": "1,000 AED",
+            "desc": "Receive expert advice tailored to your needs for personal or organizational growth."
+          },
+          {
+            "title": "One-Hour Training Workshop",
+            "price": "3,500 AED",
+            "desc": "A focused, practical session delivering actionable skills and insights."
+          },
+          {
+            "title": "One-Day Training Workshop",
+            "price": "5,000 AED",
+            "desc": "Comprehensive one-day workshop to build and refine essential professional skills."
+          },
+          {
+            "title": "One-Day Training Course",
+            "price": "8,000 AED",
+            "desc": "A full-day intensive course designed for measurable development outcomes."
+          }
+        ]
+      },
+      {
+        "category": "Medium Companies",
+        "items": [
+          {
+            "title": "Full Training Program (1 Week)",
+            "price": "20,000 AED",
+            "desc": "An in-depth, week-long training experience designed for organizational improvement."
+          }
+        ]
+      },
+      {
+        "category": "Large Companies",
+        "items": [
+          {
+            "title": "Full Training Program (1 Day)",
+            "price": "40,000 AED",
+            "desc": "A premium corporate training session focused on leadership, strategy, and performance."
+          }
+        ]
+      }
+    ]
   }
 }
