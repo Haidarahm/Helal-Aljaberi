@@ -29,8 +29,11 @@ export const LanguageProvider = ({ children }) => {
     i18n.changeLanguage(newLanguage);
 
     // Update document direction for RTL/LTR support
-    document.documentElement.dir = newLanguage === "ar" ? "rtl" : "ltr";
+    // document.documentElement.dir = newLanguage === "ar" ? "rtl" : "ltr";
     document.documentElement.lang = newLanguage;
+
+    // Refresh the page to ensure clean state
+    window.location.reload();
   };
 
   const setLanguage = (language) => {
@@ -42,6 +45,9 @@ export const LanguageProvider = ({ children }) => {
       // Update document direction for RTL/LTR support
       document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
       document.documentElement.lang = language;
+
+      // Refresh the page to ensure clean state
+      window.location.reload();
     }
   };
 
