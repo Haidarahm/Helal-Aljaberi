@@ -24,13 +24,11 @@ export default function Hero() {
 
       {/* Content */}
       <div
-        className={`${
-          isRTL ? "right-section" : "left-section"
-        } flex flex-col gap-5 w-full md:w-1/2 relative z-20 px-6 md:px-10`}
+        className={`flex flex-col gap-5 w-full md:w-1/2 relative z-20 px-6 md:px-10`}
       >
         <h1
-          className={`text-4xl md:text-5xl lg:text-7xl font-extrabold text-[color:var(--color-primary)] tracking-tight drop-shadow-md font-zain ${
-            isRTL ? "text-right" : "text-left"
+          className={`text-4xl md:text-5xl lg:text-7xl font-extrabold text-[color:var(--color-primary)] tracking-tight drop-shadow-md  ${
+            isRTL ? "text-right font-family-zain" : "text-left"
           }`}
           data-aos="fade-up"
         >
@@ -71,9 +69,7 @@ export default function Hero() {
 
       {/* Image */}
       <div
-        className={`${
-          isRTL ? "left-section" : "right-section"
-        } h-full relative z-20 w-0 md:w-1/2`}
+        className={`right-section h-full relative z-20 w-0 md:w-1/2`}
         data-aos="fade-left"
         data-aos-delay="150"
       >
@@ -81,9 +77,7 @@ export default function Hero() {
           <img
             src={helal}
             alt="Helal"
-            className={`h-full w-full object-cover opacity-95 md:absolute ${
-              isRTL ? "md:right-12" : "md:left-12"
-            }`}
+            className={`h-full w-full object-cover opacity-95 md:absolute md:left-12`}
           />
         </div>
       </div>
