@@ -48,7 +48,7 @@ export default function Contact() {
                 {t("contact_page.email")}
               </p>
               <p className="text-[color:var(--color-accent)] font-zain">
-                hello@example.com
+              He779@hotmail.com
               </p>
             </div>
             <div>
@@ -56,7 +56,7 @@ export default function Contact() {
                 {t("contact_page.phone")}
               </p>
               <p className="text-[color:var(--color-accent)] font-zain">
-                +1 (555) 123-4567
+              +971 509 590 444
               </p>
             </div>
             <div>

@@ -31,14 +31,14 @@ export default function Programs() {
   return (
     <div className="bg-[color:var(--color-secondary)] text-[color:var(--color-accent)] py-16 px-6 md:px-20 overflow-hidden">
       <h1
-        className={`text-4xl font-bold text-[color:var(--color-primary)] text-center mb-4 font-zain ${
+        className={`text-4xl xl:text-5xl 2xl:text-6xl font-bold text-[color:var(--color-primary)] text-center mb-4 font-zain ${
           isRTL ? "text-right" : "text-center"
         }`}
       >
         {t("programs.title")}
       </h1>
       <p
-        className={`text-[color:var(--color-text-light)] text-center max-w-2xl mx-auto mb-12 font-zain ${
+        className={`text-[color:var(--color-text-light)] text-center max-w-2xl mx-auto mb-12 font-zain text-base xl:text-lg 2xl:text-xl ${
           isRTL ? "text-right" : "text-center"
         }`}
       >
@@ -66,28 +66,28 @@ export default function Programs() {
               className={`md:w-1/2 p-8 ${isRTL ? "md:order-2" : "md:order-1"}`}
             >
               <h2
-                className={`text-2xl font-semibold text-[color:var(--color-primary)] mb-2 font-zain ${
+                className={`text-2xl xl:text-3xl 2xl:text-4xl font-semibold text-[color:var(--color-primary)] mb-2 font-zain ${
                   isRTL ? "text-right" : "text-left"
                 }`}
               >
                 {program.title}
               </h2>
               <h3
-                className={`text-lg text-[color:var(--color-text-light)] mb-4 font-zain ${
+                className={`text-lg xl:text-xl 2xl:text-2xl text-[color:var(--color-text-light)] mb-4 font-zain ${
                   isRTL ? "text-right" : "text-left"
                 }`}
               >
                 {program.subtitle}
               </h3>
               <p
-                className={`text-[color:var(--color-text-secondary)] mb-6 font-zain ${
+                className={`text-[color:var(--color-text-secondary)] mb-6 font-zain text-sm xl:text-base 2xl:text-lg ${
                   isRTL ? "text-right" : "text-left"
                 }`}
               >
                 {program.description}
               </p>
               <button
-                className={`bg-[color:var(--color-primary)] hover:bg-[color:var(--color-primary-dark)] text-[color:var(--color-accent)] font-medium py-2 px-5 rounded-xl transition font-zain ${
+                className={`bg-[color:var(--color-primary)] hover:bg-[color:var(--color-primary-dark)] text-[color:var(--color-accent)] font-medium py-2 px-5 xl:py-3 xl:px-6 2xl:py-4 2xl:px-8 rounded-xl transition font-zain text-sm xl:text-base 2xl:text-lg ${
                   isRTL ? "mr-auto" : "ml-0"
                 }`}
               >

@@ -38,7 +38,7 @@ export const Contact = () => {
                 isRTL ? "text-right" : "text-center"
               }`}
             >
-              hello@example.com
+              He779@hotmail.com
             </p>
           </div>
 
@@ -55,7 +55,7 @@ export const Contact = () => {
                 isRTL ? "text-right" : "text-center"
               }`}
             >
-              +1 (555) 123-4567
+              +971 509 590 444
             </p>
           </div>
 
