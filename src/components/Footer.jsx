@@ -5,24 +5,15 @@ export default function Footer() {
         <p className="text-sm text-[color:var(--color-text-light)]">
           © {new Date().getFullYear()} Helal Aljaberi. All rights reserved.
         </p>
-        <div className="flex gap-4 text-sm">
+        <div className="text-sm text-[color:var(--color-text-light)]">
+          Sponsored By{" "}
           <a
-            href="#"
-            className="hover:text-[color:var(--color-primary-light)] transition-colors"
+            href="https://tikit.ae"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[color:var(--color-primary-light)] transition-colors font-semibold"
           >
-            Privacy
-          </a>
-          <a
-            href="#"
-            className="hover:text-[color:var(--color-primary-light)] transition-colors"
-          >
-            Terms
-          </a>
-          <a
-            href="#"
-            className="hover:text-[color:var(--color-primary-light)] transition-colors"
-          >
-            Contact
+            Tikit Agency
           </a>
         </div>
       </div>

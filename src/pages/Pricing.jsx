@@ -17,16 +17,12 @@ export default function Pricing() {
   return (
     <section className="bg-[color:var(--color-secondary)] text-[color:var(--color-accent)] py-16 px-6 md:px-20">
       <h1
-        className={`text-4xl xl:text-5xl 2xl:text-6xl font-bold text-[color:var(--color-primary)] mb-4 font-zain ${
-          isRTL ? "text-right" : "text-center"
-        }`}
+        className={`text-4xl xl:text-5xl 2xl:text-6xl font-bold text-[color:var(--color-primary)] mb-4 font-zain text-center`}
       >
         {t("pricing.title")}
       </h1>
       <p
-        className={`text-[color:var(--color-text-light)] max-w-2xl mx-auto mb-12 font-zain text-base xl:text-lg 2xl:text-xl ${
-          isRTL ? "text-right" : "text-center"
-        }`}
+        className={`text-[color:var(--color-text-light)] max-w-2xl mx-auto mb-12 font-zain text-base xl:text-lg 2xl:text-xl text-center`}
       >
         {t("pricing.description")}
       </p>
@@ -62,8 +58,10 @@ export default function Pricing() {
                 {plan.items.map((item, j) => (
                   <div
                     key={j}
-                    className={`flex flex-col md:flex-row md:items-center md:justify-between border-b border-[color:var(--color-secondary)]/40 pb-4 ${
-                      isRTL ? "text-right" : "text-left"
+                    className={`flex  flex-col    md:items-center md:justify-between border-b border-[color:var(--color-secondary)]/40 pb-4 ${
+                      isRTL
+                        ? "text-right md:flex-row-reverse "
+                        : "text-left md:flex-row"
                     }`}
                   >
                     <div className="md:w-3/4">
@@ -76,9 +74,9 @@ export default function Pricing() {
                     </div>
 
                     <div
-                      className={`flex flex-col ${
-                        isRTL ? "items-start" : "items-end"
-                      } md:flex-row md:items-center gap-3 mt-3 md:mt-0`}
+                      className={`flex flex-col  md:flex-row  md:items-center gap-3 mt-3 md:mt-0
+                         ${isRTL ? "items-start " : "items-end"} 
+                        `}
                     >
                       <span className="text-[color:var(--color-primary)] text-xl xl:text-2xl 2xl:text-3xl font-bold">
                         {item.price}

@@ -5,6 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../context/LanguageContext";
+import certPdf from "../../assets/pdf/الخبرات.pdf";
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -27,7 +28,7 @@ export default function Hero() {
         className={`flex flex-col gap-5 w-full md:w-1/2 relative z-20 px-6 md:px-10`}
       >
         <h1
-          className={`text-4xl md:text-5xl lg:text-7xl font-extrabold text-[color:var(--color-primary)] tracking-tight drop-shadow-md  ${
+          className={`text-4xl md:text-5xl 2xl:text-7xl font-extrabold text-[color:var(--color-primary)] tracking-tight drop-shadow-md  ${
             isRTL ? "text-right font-family-zain" : "text-left"
           }`}
           data-aos="fade-up"
@@ -61,9 +62,13 @@ export default function Hero() {
             <span className="relative z-10">{t("hero.get_started")}</span>
             <span className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.25),rgba(255,255,255,0))]"></span>
           </button>
-          <button className="px-7 py-3 md:px-8 md:py-4 rounded-xl border-2 border-[color:var(--color-primary)] text-[color:var(--color-primary)] font-semibold transition-all duration-300 hover:bg-[color:var(--color-primary)] hover:text-[color:var(--color-secondary)] font-zain">
+          <a
+            href={certPdf}
+            download
+            className="px-7 py-3 md:px-8 md:py-4 rounded-xl border-2 border-[color:var(--color-primary)] text-[color:var(--color-primary)] font-semibold transition-all duration-300 hover:bg-[color:var(--color-primary)] hover:text-[color:var(--color-secondary)] font-zain"
+          >
             {t("hero.learn_more")}
-          </button>
+          </a>
         </div>
       </div>
 

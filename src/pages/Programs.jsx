@@ -31,16 +31,12 @@ export default function Programs() {
   return (
     <div className="bg-[color:var(--color-secondary)] text-[color:var(--color-accent)] py-16 px-6 md:px-20 overflow-hidden">
       <h1
-        className={`text-4xl xl:text-5xl 2xl:text-6xl font-bold text-[color:var(--color-primary)] text-center mb-4 font-zain ${
-          isRTL ? "text-right" : "text-center"
-        }`}
+        className={`text-4xl xl:text-5xl 2xl:text-6xl font-bold text-[color:var(--color-primary)] text-center mb-4 font-zain text-center`}
       >
         {t("programs.title")}
       </h1>
       <p
-        className={`text-[color:var(--color-text-light)] text-center max-w-2xl mx-auto mb-12 font-zain text-base xl:text-lg 2xl:text-xl ${
-          isRTL ? "text-right" : "text-center"
-        }`}
+        className={`text-[color:var(--color-text-light)] text-center max-w-2xl mx-auto mb-12 font-zain text-base xl:text-lg 2xl:text-xl text-center`}
       >
         {t("programs.description")}
       </p>

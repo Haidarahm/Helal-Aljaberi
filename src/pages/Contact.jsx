@@ -19,7 +19,7 @@ export default function Contact() {
   }
 
   return (
-    <section className="w-full bg-[color:var(--color-secondary)] py-16 px-6">
+    <section className="w-full bg-[color:var(--color-secondary)] py-22 px-6 ">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
         {/* Info */}
         <div
