@@ -17,14 +17,14 @@ export default function Pricing() {
   return (
     <section className="bg-[color:var(--color-secondary)] text-[color:var(--color-accent)] py-16 px-6 md:px-20">
       <h1
-        className={`text-4xl font-bold text-[color:var(--color-primary)] mb-4 font-zain ${
+        className={`text-4xl xl:text-5xl 2xl:text-6xl font-bold text-[color:var(--color-primary)] mb-4 font-zain ${
           isRTL ? "text-right" : "text-center"
         }`}
       >
         {t("pricing.title")}
       </h1>
       <p
-        className={`text-[color:var(--color-text-light)] max-w-2xl mx-auto mb-12 font-zain ${
+        className={`text-[color:var(--color-text-light)] max-w-2xl mx-auto mb-12 font-zain text-base xl:text-lg 2xl:text-xl ${
           isRTL ? "text-right" : "text-center"
         }`}
       >
@@ -50,7 +50,7 @@ export default function Pricing() {
                   }`}
                 />
                 <h2
-                  className={`text-2xl font-semibold text-[color:var(--color-primary)] font-zain ${
+                  className={`text-2xl xl:text-3xl 2xl:text-4xl font-semibold text-[color:var(--color-primary)] font-zain ${
                     isRTL ? "text-right" : "text-left"
                   }`}
                 >
@@ -67,10 +67,10 @@ export default function Pricing() {
                     }`}
                   >
                     <div className="md:w-3/4">
-                      <h3 className="text-lg font-medium text-[color:var(--color-accent)] mb-1 font-zain">
+                      <h3 className="text-lg xl:text-xl 2xl:text-2xl font-medium text-[color:var(--color-accent)] mb-1 font-zain">
                         {item.title}
                       </h3>
-                      <p className="text-[color:var(--color-text-secondary)] text-sm mb-2 font-zain">
+                      <p className="text-[color:var(--color-text-secondary)] text-sm xl:text-base 2xl:text-lg mb-2 font-zain">
                         {item.desc}
                       </p>
                     </div>
@@ -80,10 +80,10 @@ export default function Pricing() {
                         isRTL ? "items-start" : "items-end"
                       } md:flex-row md:items-center gap-3 mt-3 md:mt-0`}
                     >
-                      <span className="text-[color:var(--color-primary)] text-xl font-bold">
+                      <span className="text-[color:var(--color-primary)] text-xl xl:text-2xl 2xl:text-3xl font-bold">
                         {item.price}
                       </span>
-                      <button className="bg-[color:var(--color-primary)] hover:bg-[color:var(--color-primary-dark)] text-[color:var(--color-accent)] font-medium py-2 px-4 rounded-xl transition font-zain">
+                      <button className="bg-[color:var(--color-primary)] hover:bg-[color:var(--color-primary-dark)] text-[color:var(--color-accent)] font-medium py-2 px-4 xl:py-3 xl:px-6 2xl:py-4 2xl:px-8 rounded-xl transition font-zain text-sm xl:text-base 2xl:text-lg">
                         {t("pricing.subscribe_button")}
                       </button>
                     </div>
