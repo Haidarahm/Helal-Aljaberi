@@ -127,7 +127,9 @@ export default function PricingModal({ isOpen, onClose }) {
                           {item.title}
                         </h3>
 
-                        <p className="text-[color:var(--color-text-secondary)] text-sm xl:text-base font-zain leading-relaxed">
+                        <p className={`text-[color:var(--color-text-secondary)] text-sm xl:text-base font-zain leading-relaxed ${
+                          isRTL ? "text-right" : "text-left"
+                        }`}>
                           {item.desc}
                         </p>
                       </div>
