@@ -85,3 +85,124 @@
   .swiper-pagination-bullet{
     background: #ae4607 !important;
   }
+
+  /* Pricing Modal Styles */
+  .pricing-modal .ant-modal-content {
+    background-color: var(--color-secondary) !important;
+    border-radius: 16px !important;
+  }
+
+  .pricing-modal .ant-modal-header {
+    background-color: var(--color-secondary) !important;
+    border-bottom: 1px solid var(--color-secondary-light) !important;
+    border-radius: 16px 16px 0 0 !important;
+  }
+
+  .pricing-modal .ant-modal-title {
+    color: var(--color-accent) !important;
+  }
+
+  .pricing-modal .ant-modal-close {
+    color: var(--color-accent) !important;
+  }
+
+  .pricing-modal .ant-modal-close:hover {
+    color: var(--color-primary) !important;
+  }
+
+  .pricing-modal .ant-modal-body {
+    background-color: var(--color-secondary) !important;
+    color: var(--color-accent) !important;
+  }
+
+  /* Enhanced Pricing Card Styles */
+  .pricing-card {
+    position: relative;
+    background: linear-gradient(135deg, var(--color-secondary-light) 0%, var(--color-secondary) 100%);
+    border: 1px solid var(--color-secondary-light);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(249, 148, 60, 0.15);
+    border-color: var(--color-primary);
+  }
+
+  .pricing-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .pricing-card:hover::before {
+    opacity: 1;
+  }
+
+  .pricing-button {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pricing-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  .pricing-button:hover::before {
+    left: 100%;
+  }
+
+  .category-badge {
+    background: linear-gradient(135deg, var(--color-primary)/10 0%, var(--color-primary)/5 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color-primary)/20;
+  }
+
+  /* Modal Animation */
+  .pricing-modal .ant-modal-content {
+    animation: modalSlideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @keyframes modalSlideIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9) translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  /* Card Stagger Animation */
+  .pricing-card {
+    animation: cardFadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .pricing-card:nth-child(1) { animation-delay: 0.1s; }
+  .pricing-card:nth-child(2) { animation-delay: 0.2s; }
+  .pricing-card:nth-child(3) { animation-delay: 0.3s; }
+  .pricing-card:nth-child(4) { animation-delay: 0.4s; }
+
+  @keyframes cardFadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
