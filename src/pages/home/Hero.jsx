@@ -6,8 +6,10 @@ import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../context/LanguageContext";
 import certPdf from "../../assets/pdf/الخبرات.pdf";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
+  const navigate = useNavigate()
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
 
@@ -58,7 +60,7 @@ export default function Hero() {
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          <button className="group relative px-7 py-3 md:px-8 md:py-4 rounded-xl bg-[color:var(--color-primary)] text-[color:var(--color-secondary)] font-semibold shadow-md shadow-black/10 transition-all duration-300 hover:bg-[color:var(--color-primary-dark)] font-zain">
+          <button onClick={()=>navigate("/programs")} className="group relative px-7 py-3 md:px-8 md:py-4 rounded-xl bg-[color:var(--color-primary)] text-[color:var(--color-secondary)] font-semibold shadow-md shadow-black/10 transition-all duration-300 hover:bg-[color:var(--color-primary-dark)] font-zain">
             <span className="relative z-10">{t("hero.get_started")}</span>
             <span className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.25),rgba(255,255,255,0))]"></span>
           </button>

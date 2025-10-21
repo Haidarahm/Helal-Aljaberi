@@ -9,6 +9,7 @@ import { LanguageProvider } from "./context/LanguageContext";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <LanguageProvider>
+      {/* <BrowserRouter > */}
       <BrowserRouter basename="/Helal-Aljaberi">
         <App />
       </BrowserRouter>

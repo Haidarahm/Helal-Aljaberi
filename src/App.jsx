@@ -3,6 +3,8 @@ import { Suspense } from "react";
 import Contact from "./pages/Contact.jsx";
 import Programs from "./pages/Programs.jsx";
 import Pricing from "./pages/Pricing.jsx";
+import PaymentSuccess from "./pages/PaymentSuccess.jsx";
+import PaymentCancel from "./pages/PaymentCancel.jsx";
 import Layout from "./components/Layout.jsx";
 import Home from "./pages/home/Home.jsx";
 
@@ -46,6 +48,9 @@ function App() {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<Contact />} />
         </Route>
+        {/* Payment pages without layout */}
+        <Route path="/payment-success" element={<PaymentSuccess />} />
+        <Route path="/payment-cancel" element={<PaymentCancel />} />
       </Routes>
     </Suspense>
   );

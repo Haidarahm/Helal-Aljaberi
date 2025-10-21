@@ -1,10 +1,15 @@
 import { Briefcase, Building2, Users } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../context/LanguageContext";
+import { useState } from "react";
+import TelrPaymentModal from "../components/TelrPaymentModal";
 
 export default function Pricing() {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
+
+  const [selectedService, setSelectedService] = useState(null);
+  const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
 
   const iconMap = {
     0: Users,
@@ -13,6 +18,34 @@ export default function Pricing() {
   };
 
   const plans = t("pricing.plans", { returnObjects: true });
+
+  const handleSubscribe = (service) => {
+    // Convert service data to match backend format
+    const serviceData = {
+      id: service.id || `${service.title.toLowerCase().replace(/\s+/g, "_")}`,
+      title: service.title,
+      price: parseFloat(service.price.replace(/[^\d]/g, "")), // Extract number from price string
+      currency: "AED",
+      description: service.desc,
+    };
+
+    setSelectedService(serviceData);
+    setIsPaymentModalOpen(true);
+  };
+
+  const handlePaymentSuccess = (paymentData) => {
+    console.log("Payment successful:", paymentData);
+    setIsPaymentModalOpen(false);
+    setSelectedService(null);
+
+    // Show success message
+    alert("Payment successful! You will receive a confirmation email shortly.");
+  };
+
+  const handlePaymentCancel = () => {
+    setIsPaymentModalOpen(false);
+    setSelectedService(null);
+  };
 
   return (
     <section className="bg-[color:var(--color-secondary)] text-[color:var(--color-accent)] py-16 px-6 md:px-20">
@@ -81,7 +114,10 @@ export default function Pricing() {
                       <span className="text-[color:var(--color-primary)] text-xl xl:text-2xl 2xl:text-3xl font-bold">
                         {item.price}
                       </span>
-                      <button className="bg-[color:var(--color-primary)] hover:bg-[color:var(--color-primary-dark)] text-[color:var(--color-accent)] font-medium py-2 px-4 xl:py-3 xl:px-6 2xl:py-4 2xl:px-8 rounded-xl transition font-zain text-sm xl:text-base 2xl:text-lg">
+                      <button
+                        onClick={() => handleSubscribe(item)}
+                        className="bg-[color:var(--color-primary)] hover:bg-[color:var(--color-primary-dark)] text-[color:var(--color-accent)] font-medium py-2 px-4 xl:py-3 xl:px-6 2xl:py-4 2xl:px-8 rounded-xl transition font-zain text-sm xl:text-base 2xl:text-lg"
+                      >
                         {t("pricing.subscribe_button")}
                       </button>
                     </div>
@@ -92,6 +128,14 @@ export default function Pricing() {
           );
         })}
       </div>
+
+      {/* Telr Payment Modal */}
+      <TelrPaymentModal
+        service={selectedService}
+        isOpen={isPaymentModalOpen}
+        onSuccess={handlePaymentSuccess}
+        onCancel={handlePaymentCancel}
+      />
     </section>
   );
 }
